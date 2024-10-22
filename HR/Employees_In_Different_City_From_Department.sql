@@ -1,12 +1,9 @@
-SELECT 
-    d.department AS Department,
-    d.location_city AS City,
-    COUNT(e.id) AS NumberOfEmployees
-FROM 
-    [DataFrenchy].[dbo].[Department] d
-LEFT JOIN 
-    [DataFrenchy].[dbo].[Employee] e ON e.id = d.id
-GROUP BY 
-    d.department, d.location_city
-ORDER BY 
-    d.department, d.location_city;
+SELECT
+    first_name,
+    last_name,
+    location_city,
+    location_state
+FROM [DataFrenchy].[dbo].[Department]
+INNER JOIN [DataFrenchy].[dbo].[Employee]
+ON [DataFrenchy].[dbo].[Employee].id = [DataFrenchy].[dbo].[Department].id
+WHERE location_city = location_city    

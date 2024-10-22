@@ -6,6 +6,8 @@ SELECT TOP 5
 FROM 
     [DataFrenchy].[dbo].[Employee] e
 INNER JOIN 
-    [DataFrenchy].[dbo].[Department] d ON e.id = d.id
+    [DataFrenchy].[dbo].[Department] d
+ON 
+    e.id = d.id
 ORDER BY 
-    d.salary DESC;
+    d.salary DESC
