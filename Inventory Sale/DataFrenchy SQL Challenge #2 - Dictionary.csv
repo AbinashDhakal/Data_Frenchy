@@ -1,0 +1,36 @@
+,,,
+,Column Name,Data Type,Description
+,,,
+,Products,,
+,product_id,Integer,Unique identifier for each product.
+,product_name,String,Name of the product.
+,supplier_id,Integer,Unique identifier for the supplier providing the product.
+,quantity_per_unit,String,"Description of the quantity of product per unit, often specifying packaging size or format (e.g., ""10 boxes x 30 bags"", ""12 - 550 ml bottles"")."
+,unit_price,Decimal,Price per unit of the product.
+,units_in_stock,Integer,The current number of units available in inventory.
+,units_on_order,Integer,The number of units currently on order but not yet received.
+,reorder_level,Integer,The minimum quantity threshold at which a product should be reordered to prevent stockouts.
+,discontinued,Boolean (0/1),"Indicator of whether the product is still being sold (0 = not discontinued, 1 = discontinued)."
+,,,
+,Customers,,
+,customer_id,String,Unique identifier for each customer (alphanumeric code).
+,company_name,String,Name of the customer's company or business.
+,contact_name,String,Name of the primary contact person at the company.
+,contact_title,String,Job title or role of the primary contact person.
+,city,String,City where the customer is located.
+,postal_code,String,Postal code of the customer's location.
+,country,String,Country where the customer is based.
+,,,
+,Orders,,
+,order_id,Integer,Unique identifier for each order.
+,customer_id,String,"Unique identifier for the customer placing the order, referring to the customer_id in the customer table."
+,employee_id,Integer,Unique identifier for the employee responsible for handling the order.
+,order_date,Date,The date when the order was placed.
+,required_date,Date,The date by which the customer requires the order to be delivered.
+,shipped_date,Date,The date when the order was shipped.
+,ship_via,Integer,Unique identifier for the shipping method or carrier used to deliver the order.
+,freight,Decimal,The cost of freight or shipping charges for the order.
+,ship_name,String,Name of the recipient or organization receiving the shipment.
+,ship_city,String,City where the order is being shipped.
+,ship_postal_code,String,Postal code for the shipment's destination.
+,ship_country,String,Country where the order is being shipped.
